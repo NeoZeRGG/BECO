@@ -1,0 +1,94 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 240px 1200px;
+    grid-template-rows: 201px 844px;
+}
+
+
+.sidebar {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background: #F3F4F9;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.header {
+    background: #FFFFFF;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.header h1 {
+    margin: 40px 740px 31px 60px;
+}
+
+.header input {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.content {
+    background: #FAFAFA;
+}
+
+#question {
+    width: 1020px;
+    height: 28px;
+    border: none;
+}
+
+.round-box {
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin: 31px 60px 60px 40px;
+}
+
+.search {
+    margin: 16px 8px 16px 16px;
+    opacity: 20%;
+}
+
+.logo {
+    margin: 41px 78px 60px 41px;
+}
+
+.menu {
+    width: 240px;
+    height: 64px;
+    background-color: #F3F4F9;
+    border: none;
+}
+
+.menu img {
+    padding-left: 40px
+}
+
+.menu a {
+    text-decoration: none;
+    padding-left: 12px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 347px  347px  347px;
+    grid-template-rows: 160.7px 160.7px 160.7px 160.7px;
+    gap: 20px 20px;
+    margin: 40px 60px 100px 60px;
+}
+
+.card {
+    
+}
+
+
+
