@@ -4,175 +4,269 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='reset.css'>
     <link rel='stylesheet' href='style.css'>
     <title>BECO</title>
 </head>
-<body>
     <header class="header">
-        <h1>Развлечения</h1>
-        <div class=round-box>
-            <img class="search-icon" src="/img/search.svg">
-            <input id="input-question" type='text' value='Какой магазин Вам нужен?'>
-        </div>
-        
+        <h3 class="category-name">Развлечения</h3>
+        <input type="text" placeholder="Какой магазин вам нужен ?" id="input-question">
     </header>
-    <div class="sidebar">
-        <div class="logo">
-            <img src="img/logo.svg">
-            <i id='brand'>BECO</i>
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <header class="logo">
+                <img src="img/logo.svg">
+                <div id='brand'>BECO</div>
+            </header>
+            <div class="menu-categories">
+            <div class="menu-item">
+                <div>
+                    <img class="image" src="/img/catalog.svg"
+                    onmouseover="this.src='img/active/catalog.svg'; this.width=24;this.height=24;"
+                    onmouseout="this.src='img/catalog.svg'; this.width=24;this.height=24;">
+                    <div class='menu-name'>Каталог</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <img class="image" src="/img/health.svg"
+                    onmouseover="this.src='img/active/health.svg'; this.width=24;this.height=24;"
+                    onmouseout="this.src='img/health.svg'; this.width=24;this.height=24;">
+                    <div class='menu-name'>Здоровье</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <img class="image" src="/img/beauty.svg"
+                    onmouseover="this.src='img/active/beauty.svg'; this.width=24;this.height=24;"
+                    onmouseout="this.src='img/beauty.svg'; this.width=24;this.height=24;">
+                    <div class='menu-name'>Красота</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <img class="image" src="/img/enjoy.svg"
+                    onmouseover="this.src='img/active/enjoy.svg'; this.width=24;this.height=24;"
+                    onmouseout="this.src='img/enjoy.svg'; this.width=24;this.height=24;">
+                    <div class='menu-name'>Развлечения</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <img class="image" src="img/car.svg" width="24" height="24"
+                    onmouseover="this.src='img/active/car.svg'; this.width=24;this.height=24;"
+                    onmouseout="this.src='img/car.svg'; this.width=24;this.height=24;">
+                    <div class='menu-name'>Авто</div>
+                </div>
+            </div>
         </div>
-        <div class="menu">
-            <img class="image" src="/img/catalog.svg"
-            onmouseover="this.src='img/active/catalog.svg'; this.width=24;this.height=24;"
-            onmouseout="this.src='img/catalog.svg'; this.width=24;this.height=24;">
-            <a href="#"> Каталог</a>
         </div>
-        <div class="menu">
-            <img class="image" src="/img/health.svg"
-            onmouseover="this.src='img/active/health.svg'; this.width=24;this.height=24;"
-            onmouseout="this.src='img/health.svg'; this.width=24;this.height=24;">
-            <a href="#">Здоровье</a>
-        </div>
-        <div class="menu">
-            <img class="image" src="/img/beauty.svg"
-            onmouseover="this.src='img/active/beauty.svg'; this.width=24;this.height=24;"
-            onmouseout="this.src='img/beauty.svg'; this.width=24;this.height=24;">
-            <a href="#">Красота</a>
-        </div>
-        <div class="menu">
-            <img class="image" src="/img/enjoy.svg"
-            onmouseover="this.src='img/active/enjoy.svg'; this.width=24;this.height=24;"
-            onmouseout="this.src='img/enjoy.svg'; this.width=24;this.height=24;">
-            <a href="#">Развлечения</a>
-        </div>
-        <div class="menu">
-            <img class="image" src="img/car.svg" width="24" height="24"
-            onmouseover="this.src='img/active/car.svg'; this.width=24;this.height=24;"
-            onmouseout="this.src='img/car.svg'; this.width=24;this.height=24;">
-            <a href="#">Авто</a>
+        <div class="menu-button">
+            <input class="menu-button-chekbox" type="checkbox" onclick="menuExpand()">
+            <img class="menu-button-icon"  alt="menu button icon">
         </div>
     </div>
     <div class="content">
-        <div class="card" id="wine">
-            <div>
-                <p class="title">пробка на мира</p>
-                <p class="description">Вечер для двоих</p>
+        <div class="content-card">
+            <div class="content-card-image">
+                <img src="/coupons/wine.png" alt="img">
             </div>
-            <div>
-                <p class="num">-50%</p>
-                <p class="label">скидка</p>
-            </div>
-        </div>
-        <div class="card" id="beer">
-            <div>
-                <p class="title">Кино и немцы</p>
-                <p class="description">Бесплатный бокал пивa</p>
-            </div>
-            <div>
-                <p class="num">ВАРВАP</p>
-                <p class="label">промокод</p>
+
+            <div class="content-description">
+                <div class="top">
+                    <div class="top-title">пробка на мира</div>
+                    <div class="top-description">Вечер для двоих</div>
+                </div>
+                <div class="bottom">
+                    <div class="bottom-num">J130</div>
+                    <div class="bottom-label">КУПОН</div>
+                </div>
             </div>
         </div>
-        <div class="card" id="cake">
-            <div>
-                <p class="title">valery cakes</p>
-                <p class="description">Торт</p>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/beer.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">кино и немцы</div>
+                <div class="top-description">Бесплатный бокал пива</div>
             </div>
-            <div>
-                <p class="num">30%</p>
-                <p class="label">скидка</p>
+            <div class="bottom">
+                <div class="bottom-num">ВАРВАР</div>
+                <div class="bottom-label">промокод</div>
             </div>
         </div>
-        <div class="card" id="sushi">
-            <div>
-                <p class="title">sushi sell</p>
-                <p class="description">Набор "Праздник"</p>
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/cake.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">valery cakes</div>
+                <div class="top-description">Торт</div>
             </div>
-            <div>
-                <p class="num">45%</p>
-                <p class="label">скидка</p>
+            <div class="bottom">
+                <div class="bottom-num">30%</div>
+                <div class="bottom-label">скидка</div>
             </div>
         </div>
-        <div class="card" id="fruits">
-            <div>
-                <p class="title">mangosteen</p>
-                <p class="description">Фрукт в подарок</p>
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/sushi.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">sushi sell</div>
+                <div class="top-description">Набор "Праздник"</div>
             </div>
-            <div>
-                <p class="num">J130</p>
-                <p class="label">купон</p>
+            <div class="bottom">
+                <div class="bottom-num">45%</div>
+                <div class="bottom-label">скидка</div>
             </div>
         </div>
-        <div class="card" id="meat">
-            <div>
-                <p class="title">теленок табака</p>
-                <p class="description">Стейк "Мачете"</p>
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/fruits.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">mangosteen</div>
+                <div class="top-description">Фрукт в подарок</div>
             </div>
-            <div>
-                <p class="num">20%</p>
-                <p class="label">скидка</p>
+            <div class="bottom">
+                <div class="bottom-num">J130</div>
+                <div class="bottom-label">купон</div>
             </div>
         </div>
-        <div class="card" id="shaverma">
-            <div>
-                <p class="title">fire food</p>
-                <p class="description">Вторая шаурма в подарок</p>
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/meat.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">теленок табака</div>
+                <div class="top-description">Стейк "Мачете"</div>
             </div>
-            <div>
-                <p class="num">ОГОНЬ</p>
-                <p class="label">промокод</p>
+            <div class="bottom">
+                <div class="bottom-num">20%</div>
+                <div class="bottom-label">скидка</div>
             </div>
         </div>
-        <div class="card" id="icecream">
-            <div>
-                <p class="title">aroma cremeria</p>
-                <p class="description">Джелато "Пармезан"</p>
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/shaverma.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">fire food</div>
+                <div class="top-description">Вторая шаурма в подарок</div>
             </div>
-            <div>
-                <p class="num">20%</p>
-                <p class="label">скидка</p>
+            <div class="bottom">
+                <div class="bottom-num">ОГОНЬ</div>
+                <div class="bottom-label">промокод</div>
             </div>
         </div>
-        <div class="card" id="wine">
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/icecream.png" alt="img">
+        </div>
+
+        <div class="content-description">
             <div>
-                <p class="title">пробка на мира</p>
-                <p class="description">Вечер для двоих</p>
+                <div class="top-title">aroma cremeria</div>
+                <div class="top-description">Джелато "Пармезан"</div>
             </div>
             <div>
-                <p class="num">-50%</p>
-                <p class="label">скидка</p>
+                <div class="bottom-num">20%</div>
+                <div class="bottom-label">Скидка</div>
             </div>
         </div>
-        <div class="card" id="beer">
-            <div>
-                <p class="title">кино и немцы</p>
-                <p class="description">Бесплатный бокал пивa</p>
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/wine.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">пробка на мира</div>
+                <div class="top-description">Вечер для двоих</div>
             </div>
-            <div>
-                <p class="num">ВАРВАP</p>
-                <p class="label">промокод</p>
+            <div class="bottom">
+                <div class="bottom-num">J130</div>
+                <div class="bottom-label">КУПОН</div>
             </div>
         </div>
-        <div class="card" id="cake">
-            <div>
-                <p class="title">valery cakes</p>
-                <p class="description">Торт</p>
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/beer.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">кино и немцы</div>
+                <div class="top-description">Бесплатный бокал пива</div>
             </div>
-            <div>
-                <p class="num">30%</p>
-                <p class="label">скидка</p>
+            <div class="bottom">
+                <div class="bottom-num">ВАРВАР</div>
+                <div class="bottom-label">промокод</div>
             </div>
         </div>
-        <div class="card" id="sushi">
-            <div>
-                <p class="title">sushi sell</p>
-                <p class="description">Набор "Праздник"</p>
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/cake.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">valery cakes</div>
+                <div class="top-description">Торт</div>
             </div>
-            <div>
-                <p class="num">45%</p>
-                <p class="label">скидка</p>
+            <div class="bottom">
+                <div class="bottom-num">30%</div>
+                <div class="bottom-label">скидка</div>
             </div>
+        </div>
+
+    </div>
+    <div class="content-card">
+        <div class="content-card-image">
+            <img src="/coupons/sushi.png" alt="img">
+        </div>
+
+        <div class="content-description">
+            <div class="top">
+                <div class="top-title">sushi sell</div>
+                <div class="top-description">Набор "Праздник"</div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-num">45%</div>
+                <div class="bottom-label">скидка</div>
+            </div>
+        </div>
         </div>
         
     </div>

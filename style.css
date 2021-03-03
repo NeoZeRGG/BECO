@@ -1,134 +1,156 @@
-/* body {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 240px 1200px;
-    grid-template-rows: 181px 1091px;
-} */
-
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    display: grid;
-    width: 1440px;
-    height: 900px;
-    grid-template-columns: 17% 83%;
-    grid-template-rows: 20% 86%;
+    margin: 0;
+    background-color:#FAFAFA;
 }
-
+.sidebar-container {
+    z-index: 100;
+    display: flex;
+    position: fixed;
+}
 .sidebar {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    background: #F3F4F9;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    width: 240px;
+    height: 100vh;
+    background-color: #f3f4f9;
+  }
+.menu-button-icon {
+    display: none;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 41px;
+    margin-bottom: 41px;
+    margin-left: 41px;
+}
+.logo > img {
+    height: 50px;
+    width: 50px;
+}
+#brand {
+    margin-left: 10px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+}
+.menu-button-chekbox {
+    display: none;
+  }
+.menu-item {
+    padding-top: 19px;
+    padding-bottom: 23px;
+    color: #333333;
+    stroke: black;
+}
+.menu-item:hover > div {
+    color: #34abe0;
+    stroke: #34abe0;
+    padding-left: 37px;
+    border-left: 3px solid #34abe0;
+}
+.menu-item > img {
+    height: 24px;
+    width: 24px;
+}
+.menu-item > div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 40px;
+}
+.menu-name {
+    margin-left: 12px;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
-    line-height: 22px;
-}
-
+  }
 .header {
-    background: #FFFFFF;
+    position: fixed;
+    left: 240px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    z-index: 50;
+}
+.header h3 {
+    font-family: "Open Sans";
+    font-style: normal;
     font-weight: 600;
     font-size: 28px;
     line-height: 38px;
+    color: #000000;
+    opacity: 0.85;
+    margin-bottom: 31px;
+    margin-top: 0px;
 }
-
-.header h1 {
-    margin: 40px 740px 31px 60px;
-}
-
 .header input {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.45);
-}
-
-.content {
-    background: #FAFAFA;
-}
-
-#input-question {
-    width: 1020px;
-    height: 28px;
-    border: none;
-}
-
-.round-box {
+    background-image: url("./img/search.svg");
+    background-position: 16px;
+    background-repeat: no-repeat;
+    padding-left: 44px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border: 1px solid rgba(51, 51, 51, 0.2);
     box-sizing: border-box;
     border-radius: 50px;
-    margin: 31px 60px 60px 40px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.45);
+    height: 52px;
 }
-
-.search-icon {
-    margin: 16px 8px 16px 16px;
-    opacity: 20%;
-}
-
-.logo {
-    margin: 41px 78px 60px 41px;
-}
-
-.logo img {
-    width: 50px;
-    height: 50px;
-}
-
-.menu {
-    width: 240px;
-    height: 64px;
-    background-color: #F3F4F9;
-    border: none;
-    padding-top: 30px;
-}
-
-.menu:hover, .active {
-    border-left: 3px solid #34ABE0;
-    color: #34ABE0;
-}
-
-.menu a {
-    text-decoration: none;
-    padding-left: 12px;
-    color: black;
-}
-
-.menu:hover a, .menu:hover svg {
-    color: #34ABE0;
-}
-
-
-.menu img {
-    padding-left: 40px
-}
-
 .content {
-    display: grid;
-    grid-template-columns: 347px  347px  347px;
-    grid-template-rows: 160.7px 160.7px 160.7px 160.7px;
-    gap: 20px 20px;
-    margin: 40px 60px 100px 60px;
-    background-color: #FAFAFA;
+    position: absolute;
+    left: 240px;
+    right: 0;
+    top: 201px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
-
-.card {
-    border-radius: 10px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 98% 50%, 100% 55%, 100% 100%, 0% 100%, 0% 55%, 2% 50%, 0% 45%);
-    background: #FFFFFF;
-    padding: 10px;
+.content-card {
+    position: relative;
+    margin: 10px;
+    width: 347px;
+    height: 160.7px;
+    background-image: url("/img/hover-card.svg");
+    background-repeat: round;
+    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.1));
 }
-
-.card:hover {
-    border: 1px solid #DF212D;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+.content-card:hover {
+    background-image: url("/img/hover-card-active.svg");
 }
-
-.title {
-    padding-left: 20px;
-    padding-top: 16px;
-    font-family: 'Roboto';
+.content-card-image {
+    float: right;
+}
+.content-description {
+    padding: 16px 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+.top-title {
+    margin-bottom: 4px;
+    font-family: "Roboto";
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -136,38 +158,27 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #000000;
-}
-
-.description {
-    padding-left: 20px;
-    padding-top: 4px;
-    font-family: 'Roboto';
+  }
+.top-description {
+    font-family: "Roboto";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 16px;
     color: #000000;
     opacity: 0.5;
-}
-
-.num {
-    padding-left: 20px;
-    padding-bottom: 6px;
-    padding-top: 43px;
-    font-family: 'Roboto';
+  }
+.bottom-num {
+    font-family: "Roboto";
+    color: #df212d;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
     line-height: 28px;
-    display: flex;
-    align-items: center;
-    color: #DF212D;
-}
-
-.label {
-    padding-left: 20px;
-    padding-bottom: 16px;
-    font-family: 'Roboto';
+    margin-bottom: 6px;
+  }
+.bottom-label {
+    font-family: "Roboto";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -178,347 +189,173 @@ body {
     text-transform: uppercase;
     color: #000000;
     opacity: 0.5;
-}
-
-#wine {
-    background-image: url(/coupons/wine.png);
-    background-repeat: no-repeat;
-    background-size: 130px 161px;
-    background-position: right;
-    background-color: #FFFFFF;
-}
-
-#beer {
-    background-image: url(/coupons/beer.png);
-    background-repeat: no-repeat;
-    background-size: 130px 161px;
-    background-position: right;
-    background-color: #FFFFFF;
-}
-
-#cake {
-    background-image: url(/coupons/cake.png);
-    background-repeat: no-repeat;
-    background-size: 130px 161px;
-    background-position: right;
-    background-color: #FFFFFF;
-}
-
-#sushi {
-    background-image: url(/coupons/sushi.png);
-    background-repeat: no-repeat;
-    background-size: 130px 161px;
-    background-position: right;
-    background-color: #FFFFFF;
-}
-
-#fruits {
-    background-image: url(/coupons/fruits.png);
-    background-repeat: no-repeat;
-    background-size: 130px 161px;
-    background-position: right;
-    background-color: #FFFFFF;
-}
-
-#meat {
-    background-image: url(/coupons/meat.png);
-    background-repeat: no-repeat;
-    background-size: 130px 161px;
-    background-position: right;
-    background-color: #FFFFFF;
-}
-
-#shaverma {
-    background-image: url(/coupons/shaverma.png);
-    background-repeat: no-repeat;
-    background-size: 130px 161px;
-    background-position: right;
-    background-color: #FFFFFF;
-}
-
-#icecream {
-    background-image: url(/coupons/icecream.png);
-    background-repeat: no-repeat;
-    background-size: 130px 161px;
-    background-position: right;
-    background-color: #FFFFFF;
-}
+  }
 
 @media screen and (max-width: 768px) {
-    body {
-        width: 768px;
-        height: 1024px;
-    }
-
-    /* .header {
-        width: 665px;
-        height: 181px;
-    }
-    .header h1 {
-        margin: 31px 27px 33px 342px;
-        float:right;
-    }
-
-    #input-question {
-        width: 1020px;
-        height: 28px;
-        border: none;
-    } */
-    
-    .round-box {
-        border: 1px solid rgba(51, 51, 51, 0.2);
-        box-sizing: border-box;
-        border-radius: 50px;
-        margin: 31px 60px 60px 40px;
-    }
-    
-    .search-icon {
-        margin: 16px 8px 16px 16px;
-        opacity: 20%;
-    }
-
-    #brand {
-        display: none;
-    }
-    
-    .logo img {
-        width: 24px;
-        height: 24px;
-    }
-    
-    .menu {
-        width: 104px;
-        height: 60px;
-        background-color: #F3F4F9;
-        border: none;
-        padding-top: 30px;
-    }
-    
-    .menu:hover, .active {
-        border-left: 3px solid #34ABE0;
-        color: #34ABE0;
-    }
-    
-    .menu a {
-        display:none;
-    }
-    
-    .menu:hover a, .menu:hover svg {
-        color: #34ABE0;
-    }
-    
-    .menu img {
-        padding-left: 40px
-    }
-    
-     .content {
-        width: 664px;
-        height: 1091px;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: repeat(6, 1fr);
-        gap: 10px 10px;
-        margin: 27px 26px 100px 26px;
-    } 
-    
-     .title {
-        padding-left: 18px;
-        padding-top: 15px;
-        font-size: 14px;
-        line-height: 16px;
-    }
-    
-    .description {
-        padding-left: 18px;
-        padding-top: 4px;
-        font-size: 14px;
-    }
-    
-    .num {
-        padding-left: 18px;
-        padding-bottom: 3px;
-        padding-top: 31px;
-    }
-    
-    .label {
-        padding-left: 18px;
-        padding-bottom: 15px;
-    }
-    
-    #wine {
-        background-size: 104px 144px;
-    }
-    
-    #beer {
-        background-size: 104px 144px;
-    }
-    
-    #cake {
-        background-size: 104px 144px;
-    }
-    
-    #sushi {
-        background-size: 104px 144px;
-    }
-    
-    #fruits {
-        background-size: 104px 144px;
-    }
-    
-    #meat {
-        background-size: 104px 144px;
-    }
-    
-    #shaverma {
-        background-size: 104px 144px;
-    }
-    
-    #icecream {
-        background-size: 104px 144px;
-    } 
+.sidebar {
+    width: 104px;
 }
-    
+#brand {
+    display: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+.menu-button-icon {
+    margin-top: 43px;
+    display: inline;
+    content: url("/img/burger-menu.svg");
+}
+.menu-button-chekbox {
+    display: inline;
+    margin-top: 46px;
+    position: absolute;
+    transform: scale(3);
+    opacity: 0;
+}
+.logo img {
+    width: 24px;
+    height: 24px;
+}
+.menu {
+    padding-top: 22px;
+    padding-bottom: 14px;
+    }
+.menu-name {
+    display: none;
+}
+.menu-button {
+    background-image: url("/img/slider.svg");
+    height: 106px;
+    width: 48px;
+}
+.content-card {
+    width: 296px;
+    height: 144px;
+}
+.header {
+    left: 104px;
+    padding: 26px;
+}
+.content {
+    left: 104px;
+    padding-top: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    }
+.content-card-image {
+    height: 144px;
+}
+.content-card img {
+    position: absolute;
+    right: 1px;
+    width: 110px;
+    bottom: 4px;
+}
+.top-title {
+    margin-top: -3px;
+    font-size: 14px;
+}
+.top-description {
+    font-size: 14px;
+}
+.category-name {
+    text-align: right;
+    margin-top: 5px;
+}
+ 
 @media screen and (max-width: 320px) {
-    body {
-        width: 320px;
-        height: 568px;
+    .sidebar {
+        width: 12px;
     }
-    
-    .header h1 {
-        float: right;
-        margin-top:20px;
-        margin-right: 20px;
+    .logo {
+        display: none;
+        margin-left: 19px;
+    }
+    .header {
+        left: 12px;
+        padding-right: 21px;
+        padding-bottom: 27px;
+        padding-left: 20px;
+    }
+    .category-name {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
         font-size: 24px;
+        line-height: 32px;
+        left: 12px;
+        padding-right: 21px;
+        padding-bottom: 27px;
+        padding-left: 20px;
     }
-
-    .search-icon {
-        position: absolute;
-        top:-10px;
-        width: 13.33px;
-        height: 13.33px;
+    .image {
+        display: none;
+    }
+    .menu-item > div {
+        padding-left: 0px;
+    }
+    .menu-item:hover > div {
+        padding-left: 0px;
+    }
+    .menu-name {
+        margin-left: 0px;
+        padding-left: 19px;
     }
 
     #input-question {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: normal;
         font-size: 14px;
-        position: absolute;
-        top:-10px;
-        width: 207px;
-        height: 17px;
-        border: none;
-        margin: 12px 16px 12px 44px;
+        line-height: 28px;
+        padding: 12px 16px 12px 44px;
     }
-    
-    .round-box {
-        position: absolute;
-        top:30px;
-        width:267px;
-        height: 27px;
-        margin:33px 27px 27px 26px;
-    }
-    
-    .logo {
-        display:none;
-        margin: 44px 40px 68px 40px;
-    }
-
-    #brand {
-        display: none;
-    }
-    
-    .logo img {
-        width: 24px;
-        height: 24px;
-    }
-    
-    .menu {
-        display:none;
-        width: 104px;
-        height: 60px;
-        background-color: #F3F4F9;
-        border: none;
-        padding-top: 30px;
-    }
-    
-    .menu:hover, .active {
-        border-left: 3px solid #34ABE0;
-        color: #34ABE0;
-    }
-    
-    .menu a {
-        display:none;
-    }
-    
-    .menu:hover a, .menu:hover svg {
-        color: #34ABE0;
-    }
-    
-    .menu img {
-        padding-left: 40px
-    }
-    
     .content {
-        display: grid;
-        grid-template-columns: 268px;
-        grid-template-rows: 130px 130px 130px 130px 130px 130px
-        130px 130px 130px 130px 130px 130px;
-        gap: 15px 20px;
-        margin: 27px 20px 100px 20px;
-    }
-    
-    .title {
+        left: 12px;
         padding-left: 20px;
-        padding-top: 16px;
+        padding-right: 20px;
+    }
+    .content-card {
+        width: 268px;
+        height: 130px;
+        margin: 0px;
+        margin-bottom: 7px;
+    }
+    .top-title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: bold;
         font-size: 12px;
         line-height: 16px;
     }
-    
-    .description {
-        padding-left: 18px;
-        padding-top: 1px;
+    .top-description {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
         font-size: 12px;
+        line-height: 16px;
     }
-    
-    .num {
-        padding-left: 18px;
-        padding-bottom: 3px;
-        padding-top: 31px;
+    .bottom-num {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 24px;
     }
-    
-    .label {
-        padding-left: 18px;
-        padding-bottom: 15px;
+    .bottom-label {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
     }
-    
-    #wine {
-        background-size: 104px 144px;
+    .content-card-image img {
+        position: absolute;
+        right: 1px;
+        width: 89px;
+        bottom: 4px;
     }
-    
-    #beer {
-        background-size: 104px 144px;
-    }
-    
-    #cake {
-        background-size: 104px 144px;
-    }
-    
-    #sushi {
-        background-size: 104px 144px;
-    }
-    
-    #fruits {
-        background-size: 104px 144px;
-    }
-    
-    #meat {
-        background-size: 104px 144px;
-    }
-    
-    #shaverma {
-        background-size: 104px 144px;
-    }
-    
-    #icecream {
-        background-size: 104px 144px;
-    }
-} 
-
+}

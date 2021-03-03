@@ -10,8 +10,8 @@ function setDefaultValue() {
     input.value = 'Какой магазин Вам нужен?';
 }
 
-const headerText = document.querySelector('h1');
-const links = document.querySelectorAll('a');
+const headerText = document.querySelector('h3');
+const links = document.querySelectorAll(".menu-item");
 
 links.forEach((function(link) {
     link.addEventListener('click', function(e) {
