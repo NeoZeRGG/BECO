@@ -4,9 +4,8 @@ body {
     display: grid;
     height: 100vh;
     grid-template-columns: 240px 1200px;
-    grid-template-rows: 201px 844px;
+    grid-template-rows: 181px 1091px;
 }
-
 
 .sidebar {
     grid-row-start: 1;
@@ -40,7 +39,7 @@ body {
     background: #FAFAFA;
 }
 
-#question {
+#input-question {
     width: 1020px;
     height: 28px;
     border: none;
@@ -53,7 +52,7 @@ body {
     margin: 31px 60px 60px 40px;
 }
 
-.search {
+.search-icon {
     margin: 16px 8px 16px 16px;
     opacity: 20%;
 }
@@ -62,20 +61,37 @@ body {
     margin: 41px 78px 60px 41px;
 }
 
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
 .menu {
     width: 240px;
     height: 64px;
     background-color: #F3F4F9;
     border: none;
+    padding-top: 30px;
 }
 
-.menu img {
-    padding-left: 40px
+.menu:hover, .active {
+    border-left: 3px solid #34ABE0;
+    color: #34ABE0;
 }
 
 .menu a {
     text-decoration: none;
     padding-left: 12px;
+    color: black;
+}
+
+.menu:hover a, .menu:hover svg {
+    color: #34ABE0;
+}
+
+
+.menu img {
+    padding-left: 40px
 }
 
 .content {
@@ -86,9 +102,408 @@ body {
     margin: 40px 60px 100px 60px;
 }
 
-.card {
-    
+.title {
+    padding-left: 20px;
+    padding-top: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
 }
 
+.description {
+    padding-left: 20px;
+    padding-top: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 0.5;
+}
 
+.num {
+    padding-left: 20px;
+    padding-bottom: 6px;
+    padding-top: 43px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #DF212D;
+}
+
+.label {
+    padding-left: 20px;
+    padding-bottom: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.5;
+}
+
+#wine {
+    background-image: url(/coupons/wine.png);
+    background-repeat: no-repeat;
+    background-size: 130px 161px;
+    background-position: right;
+    background-color: #FFFFFF;
+}
+
+#beer {
+    background-image: url(/coupons/beer.png);
+    background-repeat: no-repeat;
+    background-size: 130px 161px;
+    background-position: right;
+    background-color: #FFFFFF;
+}
+
+#cake {
+    background-image: url(/coupons/cake.png);
+    background-repeat: no-repeat;
+    background-size: 130px 161px;
+    background-position: right;
+    background-color: #FFFFFF;
+}
+
+#sushi {
+    background-image: url(/coupons/sushi.png);
+    background-repeat: no-repeat;
+    background-size: 130px 161px;
+    background-position: right;
+    background-color: #FFFFFF;
+}
+
+#fruits {
+    background-image: url(/coupons/fruits.png);
+    background-repeat: no-repeat;
+    background-size: 130px 161px;
+    background-position: right;
+    background-color: #FFFFFF;
+}
+
+#meat {
+    background-image: url(/coupons/meat.png);
+    background-repeat: no-repeat;
+    background-size: 130px 161px;
+    background-position: right;
+    background-color: #FFFFFF;
+}
+
+#shaverma {
+    background-image: url(/coupons/shaverma.png);
+    background-repeat: no-repeat;
+    background-size: 130px 161px;
+    background-position: right;
+    background-color: #FFFFFF;
+}
+
+#icecream {
+    background-image: url(/coupons/icecream.png);
+    background-repeat: no-repeat;
+    background-size: 130px 161px;
+    background-position: right;
+    background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: 104px 665px;
+        grid-template-rows: 181px 1091px;
+    }
+    
+    .header h1 {
+        float: right;
+        margin-top:31px;
+        margin-right: 27px;
+    }
+
+    .search-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #input-question {
+        position: absolute;
+        top:-23px;
+        width: 552px;
+        height: 28px;
+        border: none;
+        margin: 33px 27px 27px 26px;
+    }
+    
+    .round-box {
+        position: absolute;
+        top: 60px;
+        width:612px;
+        height: 52px;
+        margin:33px 27px 27px 26px;
+    }
+    
+    .logo {
+        margin: 44px 40px 68px 40px;
+    }
+
+    #brand {
+        display: none;
+    }
+    
+    .logo img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .menu {
+        width: 104px;
+        height: 60px;
+        background-color: #F3F4F9;
+        border: none;
+        padding-top: 30px;
+    }
+    
+    .menu:hover, .active {
+        border-left: 3px solid #34ABE0;
+        color: #34ABE0;
+    }
+    
+    .menu a {
+        display:none;
+    }
+    
+    .menu:hover a, .menu:hover svg {
+        color: #34ABE0;
+    }
+    
+    .menu img {
+        padding-left: 40px
+    }
+    
+    .content {
+        display: grid;
+        grid-template-columns: 296px 296px;
+        grid-template-rows: 144px 144px 144px 144px 144px 144px;
+        gap: 10px 10px;
+        margin: 27px 26px 100px 26px;
+    }
+    
+    .card {
+        width: 296px;
+        height: 144px;
+    }
+    
+    .title {
+        padding-left: 18px;
+        padding-top: 15px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    .description {
+        padding-left: 18px;
+        padding-top: 4px;
+        font-size: 14px;
+    }
+    
+    .num {
+        padding-left: 18px;
+        padding-bottom: 3px;
+        padding-top: 31px;
+    }
+    
+    .label {
+        padding-left: 18px;
+        padding-bottom: 15px;
+    }
+    
+    #wine {
+        background-size: 104px 144px;
+    }
+    
+    #beer {
+        background-size: 104px 144px;
+    }
+    
+    #cake {
+        background-size: 104px 144px;
+    }
+    
+    #sushi {
+        background-size: 104px 144px;
+    }
+    
+    #fruits {
+        background-size: 104px 144px;
+    }
+    
+    #meat {
+        background-size: 104px 144px;
+    }
+    
+    #shaverma {
+        background-size: 104px 144px;
+    }
+    
+    #icecream {
+        background-size: 104px 144px;
+    }
+}
+    
+@media screen and (max-width: 320px) {
+    body {
+        grid-template-columns: 12px 308px;
+        grid-template-rows: 100px 982px;
+    }
+    
+    .header h1 {
+        float: right;
+        margin-top:20px;
+        margin-right: 20px;
+        font-size: 24px;
+    }
+
+    .search-icon {
+        position: absolute;
+        top:-10px;
+        width: 13.33px;
+        height: 13.33px;
+    }
+
+    #input-question {
+        font-size: 14px;
+        position: absolute;
+        top:-10px;
+        width: 207px;
+        height: 17px;
+        border: none;
+        margin: 12px 16px 12px 44px;
+    }
+    
+    .round-box {
+        position: absolute;
+        top:30px;
+        width:267px;
+        height: 27px;
+        margin:33px 27px 27px 26px;
+    }
+    
+    .logo {
+        display:none;
+        margin: 44px 40px 68px 40px;
+    }
+
+    #brand {
+        display: none;
+    }
+    
+    .logo img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .menu {
+        display:none;
+        width: 104px;
+        height: 60px;
+        background-color: #F3F4F9;
+        border: none;
+        padding-top: 30px;
+    }
+    
+    .menu:hover, .active {
+        border-left: 3px solid #34ABE0;
+        color: #34ABE0;
+    }
+    
+    .menu a {
+        display:none;
+    }
+    
+    .menu:hover a, .menu:hover svg {
+        color: #34ABE0;
+    }
+    
+    .menu img {
+        padding-left: 40px
+    }
+    
+    .content {
+        display: grid;
+        grid-template-columns: 268px;
+        grid-template-rows: 130px 130px 130px 130px 130px 130px
+        130px 130px 130px 130px 130px 130px;
+        gap: 15px 20px;
+        margin: 27px 20px 100px 20px;
+    }
+    
+    .title {
+        padding-left: 20px;
+        padding-top: 16px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .description {
+        padding-left: 18px;
+        padding-top: 1px;
+        font-size: 12px;
+    }
+    
+    .num {
+        padding-left: 18px;
+        padding-bottom: 3px;
+        padding-top: 31px;
+    }
+    
+    .label {
+        padding-left: 18px;
+        padding-bottom: 15px;
+    }
+    
+    #wine {
+        background-size: 104px 144px;
+    }
+    
+    #beer {
+        background-size: 104px 144px;
+    }
+    
+    #cake {
+        background-size: 104px 144px;
+    }
+    
+    #sushi {
+        background-size: 104px 144px;
+    }
+    
+    #fruits {
+        background-size: 104px 144px;
+    }
+    
+    #meat {
+        background-size: 104px 144px;
+    }
+    
+    #shaverma {
+        background-size: 104px 144px;
+    }
+    
+    #icecream {
+        background-size: 104px 144px;
+    }
+} 
 

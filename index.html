@@ -12,50 +12,171 @@
     <header class="header">
         <h1>Развлечения</h1>
         <div class=round-box>
-            <img class="search" src="/img/search.svg">
-            <input id="question" type='text' value='Какой магазин Вам нужен?'>
+            <img class="search-icon" src="/img/search.svg">
+            <input id="input-question" type='text' value='Какой магазин Вам нужен?'>
         </div>
         
     </header>
     <div class="sidebar">
         <div class="logo">
-            <img  src="img/logo.svg">
+            <img src="img/logo.svg">
+            <i id='brand'>BECO</i>
         </div>
         <div class="menu">
-            <img class="image" src="/img/catalog.svg">
+            <img class="image" src="/img/catalog.svg"
+            onmouseover="this.src='img/active/catalog.svg'; this.width=24;this.height=24;"
+            onmouseout="this.src='img/catalog.svg'; this.width=24;this.height=24;">
             <a href="#"> Каталог</a>
         </div>
         <div class="menu">
-            <img class="image" src="/img/health.svg">
+            <img class="image" src="/img/health.svg"
+            onmouseover="this.src='img/active/health.svg'; this.width=24;this.height=24;"
+            onmouseout="this.src='img/health.svg'; this.width=24;this.height=24;">
             <a href="#">Здоровье</a>
         </div>
         <div class="menu">
-            <img class="image" src="/img/beauty.svg">
+            <img class="image" src="/img/beauty.svg"
+            onmouseover="this.src='img/active/beauty.svg'; this.width=24;this.height=24;"
+            onmouseout="this.src='img/beauty.svg'; this.width=24;this.height=24;">
             <a href="#">Красота</a>
         </div>
         <div class="menu">
-            <img class="image" src="/img/enjoy.svg">
-            <a class="active" href="#">Развлечения</a>
+            <img class="image" src="/img/enjoy.svg"
+            onmouseover="this.src='img/active/enjoy.svg'; this.width=24;this.height=24;"
+            onmouseout="this.src='img/enjoy.svg'; this.width=24;this.height=24;">
+            <a href="#">Развлечения</a>
         </div>
         <div class="menu">
-            <img class="image" src="/img/car.svg">
+            <img class="image" src="img/car.svg" width="24" height="24"
+            onmouseover="this.src='img/active/car.svg'; this.width=24;this.height=24;"
+            onmouseout="this.src='img/car.svg'; this.width=24;this.height=24;">
             <a href="#">Авто</a>
         </div>
     </div>
     <div class="content">
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
-        <div class="card">Купоны</div>
+        <div class="card" id="wine">
+            <div>
+                <p class="title">пробка на мира</p>
+                <p class="description">Вечер для двоих</p>
+            </div>
+            <div>
+                <p class="num">-50%</p>
+                <p class="label">скидка</p>
+            </div>
+        </div>
+        <div class="card" id="beer">
+            <div>
+                <p class="title">Кино и немцы</p>
+                <p class="description">Бесплатный бокал пивa</p>
+            </div>
+            <div>
+                <p class="num">ВАРВАP</p>
+                <p class="label">промокод</p>
+            </div>
+        </div>
+        <div class="card" id="cake">
+            <div>
+                <p class="title">valery cakes</p>
+                <p class="description">Торт</p>
+            </div>
+            <div>
+                <p class="num">30%</p>
+                <p class="label">скидка</p>
+            </div>
+        </div>
+        <div class="card" id="sushi">
+            <div>
+                <p class="title">sushi sell</p>
+                <p class="description">Набор "Праздник"</p>
+            </div>
+            <div>
+                <p class="num">45%</p>
+                <p class="label">скидка</p>
+            </div>
+        </div>
+        <div class="card" id="fruits">
+            <div>
+                <p class="title">mangosteen</p>
+                <p class="description">Фрукт в подарок</p>
+            </div>
+            <div>
+                <p class="num">J130</p>
+                <p class="label">купон</p>
+            </div>
+        </div>
+        <div class="card" id="meat">
+            <div>
+                <p class="title">теленок табака</p>
+                <p class="description">Стейк "Мачете"</p>
+            </div>
+            <div>
+                <p class="num">20%</p>
+                <p class="label">скидка</p>
+            </div>
+        </div>
+        <div class="card" id="shaverma">
+            <div>
+                <p class="title">fire food</p>
+                <p class="description">Вторая шаурма в подарок</p>
+            </div>
+            <div>
+                <p class="num">ОГОНЬ</p>
+                <p class="label">промокод</p>
+            </div>
+        </div>
+        <div class="card" id="icecream">
+            <div>
+                <p class="title">aroma cremeria</p>
+                <p class="description">Джелато "Пармезан"</p>
+            </div>
+            <div>
+                <p class="num">20%</p>
+                <p class="label">скидка</p>
+            </div>
+        </div>
+        <div class="card" id="wine">
+            <div>
+                <p class="title">пробка на мира</p>
+                <p class="description">Вечер для двоих</p>
+            </div>
+            <div>
+                <p class="num">-50%</p>
+                <p class="label">скидка</p>
+            </div>
+        </div>
+        <div class="card" id="beer">
+            <div>
+                <p class="title">кино и немцы</p>
+                <p class="description">Бесплатный бокал пивa</p>
+            </div>
+            <div>
+                <p class="num">ВАРВАP</p>
+                <p class="label">промокод</p>
+            </div>
+        </div>
+        <div class="card" id="cake">
+            <div>
+                <p class="title">valery cakes</p>
+                <p class="description">Торт</p>
+            </div>
+            <div>
+                <p class="num">30%</p>
+                <p class="label">скидка</p>
+            </div>
+        </div>
+        <div class="card" id="sushi">
+            <div>
+                <p class="title">sushi sell</p>
+                <p class="description">Набор "Праздник"</p>
+            </div>
+            <div>
+                <p class="num">45%</p>
+                <p class="label">скидка</p>
+            </div>
+        </div>
+        
     </div>
     
 </body>
+<script src='app.js'></script>
 </html>
