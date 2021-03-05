@@ -1,12 +1,14 @@
 body {
     margin: 0;
-    background-color:#FAFAFA;
+    background-color: #FAFAFA;
 }
+
 .sidebar-container {
     z-index: 100;
     display: flex;
     position: fixed;
 }
+
 .sidebar {
     display: flex;
     flex: none;
@@ -14,10 +16,12 @@ body {
     width: 240px;
     height: 100vh;
     background-color: #f3f4f9;
-  }
+}
+
 .menu-button-icon {
     display: none;
 }
+
 .logo {
     display: flex;
     flex-direction: row;
@@ -26,10 +30,12 @@ body {
     margin-bottom: 41px;
     margin-left: 41px;
 }
-.logo > img {
+
+.logo>img {
     height: 50px;
     width: 50px;
 }
+
 #brand {
     margin-left: 10px;
     font-family: "Poppins";
@@ -38,37 +44,44 @@ body {
     font-size: 16px;
     color: #333333;
 }
+
 .menu-button-chekbox {
     display: none;
-  }
+}
+
 .menu-item {
     padding-top: 19px;
     padding-bottom: 23px;
     color: #333333;
     stroke: black;
 }
-.menu-item:hover > div {
+
+.menu-item:hover>div {
     color: #34abe0;
     stroke: #34abe0;
     padding-left: 37px;
     border-left: 3px solid #34abe0;
 }
-.menu-item > img {
+
+.menu-item>img {
     height: 24px;
     width: 24px;
 }
-.menu-item > div {
+
+.menu-item>div {
     display: flex;
     align-items: center;
     justify-content: left;
     padding-left: 40px;
 }
+
 .menu-name {
     margin-left: 12px;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
-  }
+}
+
 .header {
     position: fixed;
     left: 240px;
@@ -80,6 +93,7 @@ body {
     background-color: #ffffff;
     z-index: 50;
 }
+
 .header h3 {
     font-family: "Open Sans";
     font-style: normal;
@@ -91,6 +105,7 @@ body {
     margin-bottom: 31px;
     margin-top: 0px;
 }
+
 .header input {
     background-image: url("./img/search.svg");
     background-position: 16px;
@@ -109,6 +124,7 @@ body {
     color: rgba(0, 0, 0, 0.45);
     height: 52px;
 }
+
 .content {
     position: absolute;
     left: 240px;
@@ -122,6 +138,7 @@ body {
     padding-left: 50px;
     padding-right: 50px;
 }
+
 .content-card {
     position: relative;
     margin: 10px;
@@ -131,12 +148,15 @@ body {
     background-repeat: round;
     filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.1));
 }
+
 .content-card:hover {
     background-image: url("/img/hover-card-active.svg");
 }
+
 .content-card-image {
     float: right;
 }
+
 .content-description {
     padding: 16px 20px;
     position: absolute;
@@ -148,6 +168,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .top-title {
     margin-bottom: 4px;
     font-family: "Roboto";
@@ -158,7 +179,8 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #000000;
-  }
+}
+
 .top-description {
     font-family: "Roboto";
     font-style: normal;
@@ -167,7 +189,8 @@ body {
     line-height: 16px;
     color: #000000;
     opacity: 0.5;
-  }
+}
+
 .bottom-num {
     font-family: "Roboto";
     color: #df212d;
@@ -176,7 +199,8 @@ body {
     font-size: 36px;
     line-height: 28px;
     margin-bottom: 6px;
-  }
+}
+
 .bottom-label {
     font-family: "Roboto";
     font-style: normal;
@@ -189,97 +213,164 @@ body {
     text-transform: uppercase;
     color: #000000;
     opacity: 0.5;
-  }
+}
+.category-name.off {
+    display: none;
+}
+
 
 @media screen and (max-width: 768px) {
-.sidebar {
-    width: 104px;
-}
-#brand {
-    display: none;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-}
-.menu-button-icon {
-    margin-top: 43px;
-    display: inline;
-    content: url("/img/burger-menu.svg");
-}
-.menu-button-chekbox {
-    display: inline;
-    margin-top: 46px;
-    position: absolute;
-    transform: scale(3);
-    opacity: 0;
-}
-.logo img {
-    width: 24px;
-    height: 24px;
-}
-.menu {
-    padding-top: 22px;
-    padding-bottom: 14px;
+    .sidebar {
+        width: 104px;
     }
-.menu-name {
-    display: none;
-}
-.menu-button {
-    background-image: url("/img/slider.svg");
-    height: 106px;
-    width: 48px;
-}
-.content-card {
-    width: 296px;
-    height: 144px;
-}
-.header {
-    left: 104px;
-    padding: 26px;
-}
-.content {
-    left: 104px;
-    padding-top: 0px;
-    padding-left: 16px;
-    padding-right: 16px;
+
+    .sidebar.active-medium {
+        width: 246px;
     }
-.content-card-image {
-    height: 144px;
+
+    #brand.active-medium {
+        display: block;
+    }
+
+    #brand {
+        display: none;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .menu-button-icon {
+        margin-top: 43px;
+        display: inline;
+        content: url("/img/burger-menu.svg");
+    }
+
+    .menu-button-icon.active-medium {
+        margin-top: 43px;
+        display: inline;
+        content: url("/img/exit.svg");
+    }
+
+    .menu-button-chekbox {
+        display: inline;
+        margin-top: 46px;
+        position: absolute;
+        transform: scale(3);
+        opacity: 0;
+    }
+
+    .logo img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .menu {
+        padding-top: 22px;
+        padding-bottom: 14px;
+    }
+    .menu-name {
+        display: none;
+    }
+
+    .menu-name.active-medium {
+        display: block;
+    }
+
+    .menu-button {
+        background-image: url("/img/slider.svg");
+        height: 106px;
+        width: 48px;
+    }
+
+    .content-card {
+        width: 296px;
+        height: 144px;
+    }
+
+    .header {
+        left: 104px;
+        padding: 26px;
+    }
+
+    .content {
+        left: 104px;
+        padding-top: 0px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .content.active-medium {
+        left: 240px;
+    }
+
+    .content-card-image {
+        height: 144px;
+    }
+
+    .content-card img {
+        position: absolute;
+        right: 1px;
+        width: 110px;
+        bottom: 4px;
+    }
+
+    .top-title {
+        margin-top: -3px;
+        font-size: 14px;
+    }
+
+    .top-description {
+        font-size: 14px;
+    }
+
+    .category-name {
+        text-align: right;
+        margin-top: 5px;
+    }
+    .category-name .off {
+        font-size: 100px;
+    }
 }
-.content-card img {
-    position: absolute;
-    right: 1px;
-    width: 110px;
-    bottom: 4px;
-}
-.top-title {
-    margin-top: -3px;
-    font-size: 14px;
-}
-.top-description {
-    font-size: 14px;
-}
-.category-name {
-    text-align: right;
-    margin-top: 5px;
-}
- 
+
 @media screen and (max-width: 320px) {
     .sidebar {
         width: 12px;
     }
+
+    .sidebar.active-small {
+        width: 192px;
+    }
+
     .logo {
         display: none;
         margin-left: 19px;
     }
+
+    .logo img {
+        margin-left: 20px;
+    }
+
+    .logo.active-small {
+        display: block;
+        margin-left: 19px;
+    }
+
+    #brand.active-small {
+        position: absolute;
+        display: inline;
+        margin-left: 5px;
+        margin-top: 3px;
+    }
+
     .header {
         left: 12px;
         padding-right: 21px;
         padding-bottom: 27px;
         padding-left: 20px;
     }
+
     .category-name {
         font-family: "Open Sans";
         font-style: normal;
@@ -291,18 +382,26 @@ body {
         padding-bottom: 27px;
         padding-left: 20px;
     }
+
     .image {
         display: none;
     }
-    .menu-item > div {
+
+    .menu-item>div {
         padding-left: 0px;
     }
-    .menu-item:hover > div {
+
+    .menu-item:hover>div {
         padding-left: 0px;
     }
+
     .menu-name {
-        margin-left: 0px;
+        margin-top: 0px;
         padding-left: 19px;
+    }
+
+    .menu-name.active-small {
+        display: inline;
     }
 
     #input-question {
@@ -313,17 +412,20 @@ body {
         line-height: 28px;
         padding: 12px 16px 12px 44px;
     }
+
     .content {
         left: 12px;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .content-card {
         width: 268px;
         height: 130px;
         margin: 0px;
         margin-bottom: 7px;
     }
+
     .top-title {
         font-family: "Roboto";
         font-style: normal;
@@ -331,6 +433,7 @@ body {
         font-size: 12px;
         line-height: 16px;
     }
+
     .top-description {
         font-family: "Roboto";
         font-style: normal;
@@ -338,6 +441,7 @@ body {
         font-size: 12px;
         line-height: 16px;
     }
+
     .bottom-num {
         font-family: "Roboto";
         font-style: normal;
@@ -345,6 +449,7 @@ body {
         font-size: 28px;
         line-height: 24px;
     }
+
     .bottom-label {
         font-family: "Roboto";
         font-style: normal;
@@ -352,6 +457,7 @@ body {
         font-size: 12px;
         line-height: 16px;
     }
+
     .content-card-image img {
         position: absolute;
         right: 1px;
